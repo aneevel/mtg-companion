@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/aneevel/mtg-companion/issues"
   },
-  "homepage": "https://github.com/aneevel/mtg-companion#readme"
+  "homepage": "https://github.com/aneevel/mtg-companion#readme",
+  "dependencies": {
+    "@angular/animations": "^13.3.0",
+    "@angular/cdk": "^13.3.1",
+    "@angular/flex-layout": "^13.0.0-beta.38",
+    "@angular/material": "^13.3.1"
+  }
 }
