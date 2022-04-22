@@ -11,7 +11,7 @@ if (process.env.API_PORT)
     port = process.env.API_PORT;
 
 
-app.use(deckRoutes);
+app.use('/decks', deckRoutes);
 
 app.listen(port, () => {
     console.log(`MTG Companion API listening on port ${port}`);
