@@ -19,6 +19,6 @@ router.patch('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     res.send(`DELETE decks endpoint for ${req.params.id}`);
-})
+});
 
 module.exports = router;
