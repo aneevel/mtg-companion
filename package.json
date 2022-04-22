@@ -22,5 +22,8 @@
     "@angular/flex-layout": "^13.0.0-beta.38",
     "@angular/material": "^13.3.1",
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
