@@ -1,6 +1,8 @@
 # Site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project serves as a companion app to a game of Magic: The Gathering. It's intended use is at the side of a game, where players can
+set up a deck, the format, and track game status (life, etc.,). Statistics can be viewed for games played and players within the system.
+Down the line, it may serve as a deck builder/tracker. 
 
 ## Development server
 
