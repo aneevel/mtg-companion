@@ -1,8 +1,12 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -14,22 +18,33 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'site'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('site');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  beforeEach(async () => {
+    fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('site app is running!');
+    component = fixture.componentInstance;
+  })
+
+  it('should create the app', () => {
+    expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'Magic: The Gathering - Companion App'`, () => {
+    expect(component.title).toEqual('Magic: The Gathering - Companion App');
+  });
+
+  it(`should have a nav component`, () => {
+    const el = fixture.debugElement.nativeElement;
+    expect(el.querySelector('app-nav')).not.toBe(null);
+  });
+
+  it(`should have a router-outlet component`, () => {
+    const el = fixture.debugElement.nativeElement;
+    expect(el.querySelector('router-outlet')).not.toBe(null);
+  });
+
+  it(`should have a footer component`, () => {
+    const el = fixture.debugElement.nativeElement;
+    expect(el.querySelector('app-footer')).not.toBe(null);
+  });
+
 });
